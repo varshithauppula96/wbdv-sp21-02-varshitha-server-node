@@ -13,5 +13,7 @@ const demos =require('./controllers/demos-controller')
 demos(app)
 
 const quizzesController = require("./controllers/quizzes_controller")
+const questionController = require("./controllers/question_controller")
 quizzesController(app)
+questionController(app)
 app.listen(3000)

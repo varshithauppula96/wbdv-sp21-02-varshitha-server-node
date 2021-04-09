@@ -1,4 +1,4 @@
-const quizzesService = require("../services/quizzes-service")
+const quizzesService = require("../services/quizes/quizzes-service")
 module.exports =(app) =>{
 
     const findAllQuizzes =(req,res) =>{
