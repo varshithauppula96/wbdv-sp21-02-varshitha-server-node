@@ -2,6 +2,14 @@ const express = require('express')
 const mongoose =require('mongoose')
 mongoose.connect('mongodb://localhost:27017/whiteboard-01', {useNewUrlParser: true});
 const app = express()
+
+const session =require('express-session')
+app.use(session({
+    secret: 'keyboard cat',
+    resave: false,
+    saveUninitialized: true,
+    // cookie: { secure: true }
+}))
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers',
