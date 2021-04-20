@@ -3,7 +3,7 @@ module.exports =(app) =>{
 
     const findAllQuizzes =(req,res) =>{
         // res.send(quizzesService.findAllQuizes())
-        quizzesService.findAllQuizes().then((quizzes)=>{
+        quizzesService.findAllQuizzes().then((quizzes)=>{
             res.send(quizzes)
         })
     }
