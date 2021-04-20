@@ -1,12 +1,11 @@
-const mongoose =require("mongoose")
+const mongoose = require('mongoose')
 const quizzesSchema = mongoose.Schema({
     _id: String,
-    title:String,
-    courseId: String,
+    title: String,
     questions: [{
         type: String,
         ref: 'QuestionsModel'
     }]
-},{collection: "quizzes"})
+}, {collection: 'quizzes'})
 
-module.exports =quizzesSchema
+module.exports = quizzesSchema
